@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fly With Sachin – One Stop Platform for Tech & Creativity!</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Montserrat', sans-serif;
+        }
+        
+        body {
+            background: #fafafa;
+            color: #333;
+            overflow-x: hidden;
+        }
+        
+        .hero {
+            height: 100vh;
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/f484f198-bf06-4fbc-abdc-70c7881ae2db.png') no-repeat center center/cover;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+        }
+        
+        .hero-title {
+            font-size: 5rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
+            opacity: 0;
+            transform: translateY(50px);
+            animation: fadeInUp 1s forwards 0.5s;
+        }
+        
+        .cta-button {
+            padding: 1rem 2.5rem;
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            opacity: 0;
+            transform: translateY(50px);
+            animation: fadeInUp 1s forwards 1.1s;
+        }
+        
+        .cta-button:hover {
+            background: white;
+            color: #333;
+        }
+        
+        .vision {
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+        
+        .vision-title {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .vision-statement {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .services {
+            padding: 4rem 2rem;
+            background: #f0f0f0;
+        }
+        
+        .service-card {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+            text-align: center;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .service-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .project-ideas {
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+        
+        .project-card {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            margin: 1rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .footer {
+            background: #333;
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+        
+        .contact-form input, 
+        .contact-form textarea {
+            border: 1px solid #ddd;
+            transition: all 0.3s;
+        }
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            border-color: #4a90e2;
+            box-shadow: 0 0 0 3px rgba(74,144,226,0.2);
+        }
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Fly With Sachin</h1>
+            <p class="hero-subtitle">One Stop Platform for Tech & Creativity!</p>
+            <button class="cta-button" onclick="document.getElementById('vision').scrollIntoView({ behavior: 'smooth' });">Explore Services</button>
+        </div>
+    </section>
+
+    <!-- Vision Section -->
+    <section class="vision" id="vision">
+        <h2 class="vision-title">🚀 Our Vision</h2>
+        <p class="vision-statement">"Empower learners, creators, and techies."</p>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <h2 class="vision-title">🛠️ Services</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div class="service-card">
+                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/7f713494-9e61-4497-ae95-c73de514d4b4.png" alt="Account Access Icon" class="service-icon w-20 h-20 mx-auto mb-4 rounded-full">
+                <h3 class="text-xl font-bold mb-2">Account Access Help</h3>
+                <p class="mb-4">Unlock global content (YouTube/FB) with VPN setups and account help</p>
+                <button class="cta-button">Get Started</button>
+            </div>
+            <div class="service-card">
+                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/05be4f39-94e0-4129-b4a4-232959029052.png" alt="Digital Marketing" class="service-icon w-20 h-20 mx-auto mb-4 rounded-full">
+                <h3 class="text-xl font-bold mb-2">Digital Marketing</h3>
+                <p class="mb-4">Complete courses on SEO, Social Media, and Ads strategies</p>
+                <button class="cta-button">Explore Courses</button>
+            </div>
+            <div class="service-card">
+                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/9aaf9efa-29db-4b3e-ae8c-9578ebf8db5e.png" alt="Web Development" class="service-icon w-20 h-20 mx-auto mb-4 rounded-full">
+                <h3 class="text-xl font-bold mb-2">Website & App Development</h3>
+                <p class="mb-4">From HTML basics to React/Node.js - full stack development</p>
+                <button class="cta-button">Learn Now</button>
+            </div>
+            <div class="service-card">
+                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/864b6ce0-8198-4e37-99a6-682ab6b41c78.png" alt="Video Editing" class="service-icon w-20 h-20 mx-auto mb-4 rounded-full">
+                <h3 class="text-xl font-bold mb-2">Photo/Video Editing</h3> 
+                <p class="mb-4">Premiere Pro, Photoshop tutorials + professional editing services</p>
+                <button class="cta-button">See Projects</button>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">📝</div>
+                <h3>Content Creation Ideas</h3>
+                <p>Ideas and captions generator.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🔧</div>
+                <h3>Arduino / ESP32 / Raspberry Pi Code Free</h3>
+                <p>Access to free code and resources.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🛒</div>
+                <h3>E-commerce of Components</h3>
+                <p>Buy Arduino, sensors, wires, etc.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🏆</div>
+                <h3>Free Hackathon & School Projects</h3>
+                <p>Access to project ideas and resources.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Online Store Section -->
+    <section class="services" id="store">
+        <h2 class="vision-title">🛍️ Online Store</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div class="service-card">
+                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/43691fc0-a865-404f-a686-a562b51e60f8.png" alt="Arduino Starter Kit" class="mb-4">
+                <h3>Arduino</h3>
+                <p>Price: $10</p>
+                <button class="cta-button">Add to Cart</button>
+            </div>
+            <div class="service-card">
+                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/0b6a54e4-b177-4eba-8650-54936a2180cd.png" alt="ESP32 microcontroller" class="mb-4">
+                <h3>ESP32</h3>
+                <p>Price: $15</p>
+                <button class="cta-button">Add to Cart</button>
+            </div>
+            <div class="service-card">
+                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/1915361d-feb6-4469-851e-d233d9cade6b.png" alt="Electronic sensors" class="mb-4">
+                <h3>Sensors</h3>
+                <p>Price: $5</p>
+                <button class="cta-button">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Ideas Section -->
+    <section class="project-ideas" id="projects">
+        <h2 class="vision-title">💡 Project Ideas</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div class="project-card">
+                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/731c6c65-a982-485d-b660-39d7da4c10f7.png" alt="Rain sensing system project" class="mb-4">
+                <h3 class="text-xl font-bold mb-4">Rain Sensing System</h3>
+                <div class="tutorial-steps mb-6">
+                    <div class="step flex mb-2">
+                        <span class="step-number bg-blue-500 text-white rounded-full w-6 h-6 flex items-center justify-center mr-2">1</span>
+                        <p>Connect rain sensor to Arduino's analog pin</p>
+                    </div>
+                    <div class="step flex mb-2">
+                        <span class="step-number bg-blue-500 text-white rounded-full w-6 h-6 flex items-center justify-center mr-2">2</span>
+                        <p>Upload moisture detection code</p>
+                    </div>
+                    <div class="step flex mb-2">
+                        <span class="step-number bg-blue-500 text-white rounded-full w-6 h-6 flex items-center justify-center mr-2">3</span>
+                        <p>Set up alerts/alarms when rain detected</p>
+                    </div>
+                </div>
+                <button class="cta-button">Download Full Tutorial</button>
+            </div>
+            <div class="project-card">
+                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/f67e310b-8e4f-4fa1-8b20-80fa7820f2bd.png" alt="Smart irrigation project" class="mb-4">
+                <h3 class="text-xl font-bold mb-4">Smart Irrigation</h3>
+                <div class="tutorial-steps mb-6">
+                    <div class="step flex mb-2">
+                        <span class="step-number bg-green-500 text-white rounded-full w-6 h-6 flex items-center justify-center mr-2">1</span>
+                        <p>Connect soil moisture sensor to microcontroller</p>
+                    </div>
+                    <div class="step flex mb-2">
+                        <span class="step-number bg-green-500 text-white rounded-full w-6 h-6 flex items-center justify-center mr-2">2</span>
+                        <p>Setup water pump relay control</p>
+                    </div>
+                    <div class="step flex mb-2">
+                        <span class="step-number bg-green-500 text-white rounded-full w-6 h-6 flex items-center justify-center mr-2">3</span>
+                        <p>Write automation logic based on moisture levels</p>
+                    </div>
+                </div>
+                <button class="cta-button">Download Full Tutorial</button>
+            </div>
+            <div class="project-card">
+                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/b15473b0-7dcd-40ed-b50c-95ff8dff7b7d.png" alt="Line follower robot project" class="mb-4">
+                <h3 class="text-xl font-bold mb-4">Line Follower Robot</h3>
+                <div class="tutorial-steps mb-6">
+                    <div class="step flex mb-2">
+                        <span class="step-number bg-red-500 text-white rounded-full w-6 h-6 flex items-center justify-center mr-2">1</span>
+                        <p>Assemble IR sensor array on robot chassis</p>
+                    </div>
+                    <div class="step flex mb-2">
+                        <span class="step-number bg-red-500 text-white rounded-full w-6 h-6 flex items-center justify-center mr-2">2</span>
+                        <p>Connect motors to motor driver board</p>
+                    </div>
+                    <div class="step flex mb-2">
+                        <span class="step-number bg-red-500 text-white rounded-full w-6 h-6 flex items-center justify-center mr-2">3</span>
+                        <p>Upload PID control algorithm for smooth tracking</p>
+                    </div>
+                </div>
+                <button class="cta-button">Download Full Tutorial</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Learn With Us Section -->
+    <section class="vision" id="learn">
+        <h2 class="vision-title">🧠 Learn With Us</h2>
+        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/71187068-b549-4a1b-a1e5-8a7fa9e0454b.png" alt="Learning resources" class="mb-8">
+        <p>Embedded videos or links to tutorials and downloadable PDFs or guides.</p>
+    </section>
+
+    <!-- Showcase Section -->
+    <section class="vision" id="showcase">
+        <h2 class="vision-title">📸 Showcase</h2>
+        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/67218226-2a15-4284-923c-ce1baaf5870b.png" alt="Project showcase examples" class="mb-8">
+        <p>Gallery of edited photos/videos with before/after animation slider.</p>
+    </section>
+
+    <!-- Contact Us Section -->
+    <section class="vision" id="contact">
+        <h2 class="vision-title">📞 Contact Us</h2>
+        <div class="contact-form max-w-lg mx-auto my-8">
+            <form class="space-y-4">
+                <input type="text" placeholder="Your Name" class="w-full p-2 border rounded">
+                <input type="email" placeholder="Your Email" class="w-full p-2 border rounded">
+                <textarea placeholder="Your Message" class="w-full p-2 border rounded h-32"></textarea>
+                <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded">Send Message</button>
+            </form>
+            <div class="social-links mt-8 flex justify-center space-x-4">
+                <a href="#" class="text-blue-500"><i class="fab fa-whatsapp text-2xl"></i></a>
+                <a href="#" class="text-red-500"><i class="fab fa-youtube text-2xl"></i></a>
+                <a href="#" class="text-pink-500"><i class="fab fa-instagram text-2xl"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2023 Fly With Sachin. All rights reserved.</p>
+        <p><a href="#" class="footer-link">Terms & Conditions</a></p>
+        <p>Made by: Sachin 💻</p>
+    </footer>
+
+    <script>
+        // Smooth scroll for navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
